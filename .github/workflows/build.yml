@@ -8,6 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: unzip -q AboZahra_GitHub_Ready.zip
+      - run: sed -i 's/singleLine = true/setSingleLine(true)/' BlackHoleAndroid/app/src/main/java/com/blackhole/downloader/MainActivity.kt
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
